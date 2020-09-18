@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {Typography,Menu,MenuItem} from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import {Dropdown} from 'react-bootstrap'
 
 function Nav() {
 
@@ -71,6 +72,7 @@ function Nav() {
                 }}
                 open={open}
                 onClose={handleClose}
+               
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={signOut}>Sign out</MenuItem>
