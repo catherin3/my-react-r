@@ -3,11 +3,15 @@ import './App.css';
 import Nav from './Nav.js';
 import About from './About.js';
 import Shop from './Shop.js';
-import Card from './Card.js'
+import Card from './Card.js';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
+import daisy from './Daisy.jpg';
+import sunflower from './Sunflower.jpg';
 
 function App() {
+
+
+
   return (
     <Router>
     <div className="App">
@@ -26,8 +30,11 @@ function App() {
 const Home = () => (
   <div>
     <h1>Home Page</h1>
+    
   </div>
 )
+
+
 
 
 export default App;

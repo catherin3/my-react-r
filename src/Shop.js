@@ -2,44 +2,126 @@ import React from 'react';
 import './App.css';
 import daisy from './Daisy.jpg';
 import sunflower from './Sunflower.jpg';
-import {Card} from 'react-bootstrap';
+import { Grid, Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+    margin: 10,
+    marginTop: 20,
+    marginLeft: 30
+  },
+  media: {
+    height: 140,
+  },
+});
 
 function Shop() {
-
-  const cardInfo =[
-    {image: daisy,title:"Daisy",text:"This is Daisy."},
-    {image:sunflower,title:"Sunflower",text:"This is Sunflower."}
-  ];
-
-  const renderCard = (card,index) =>{
-    return(
-           <Card style={{ width: '18rem' }} key={index} className="box">
-          <Card.Img variant="top" src="holder.js/100px180" src={card.image} style={{width: "200px"}}/>
-          <Card.Body>
-          <Card.Title>{card.title}</Card.Title>
-          
-          <Card.Text>
-            {card.text}
-            </Card.Text>
-            </Card.Body>
-    </Card>
-    )
-  }
+  const classes = useStyles();
 
   return (
     <div className="grid">
-        <h1 style={{fontFamily: 'bold'}}>Shop Page</h1>
-    {/* //     <div className="row">
-    //     <div className="column">
-    //     <img src={daisy} alt="Daisy" style={{width: "200px"}} />
-    //     </div>
-    //     <div className = "column">
-    //     <img src={sunflower} alt="Sunflower" style={{width: "200px"}} />
-    //     </div>
-    //     </div> */}
+      <h1 style={{ fontFamily: 'bold' }}>Shop Page</h1>
 
-    {cardInfo.map(renderCard)}
-</div>
+      <Grid container>
+        <Grid item sm>
+          <Card className={classes.root}>
+
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require('./Daisy.jpg')}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Daisy
+    </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Daisy are ....
+    </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+  </Button>
+              <Button size="small" color="primary">
+                Details
+  </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item sm>
+          <Card className={classes.root}>
+
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require('./Sunflower.jpg')}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Sunflower
+</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Sunflower are ....
+</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+</Button>
+              <Button size="small" color="primary">
+                Details
+</Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item sm>
+
+          <Card className={classes.root}>
+
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image={require('./Daisy.jpg')}
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Daisy
+</Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Daisy are ....
+</Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button size="small" color="primary">
+                Share
+</Button>
+              <Button size="small" color="primary">
+                Details
+</Button>
+            </CardActions>
+          </Card>
+
+        </Grid>
+
+      </Grid>
+
+    </div>
   );
 }
 
