@@ -11,6 +11,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import detail1 from './details1.js';
 
 const useStyles = makeStyles({
   root: {
@@ -54,7 +55,7 @@ function Shop() {
               <Button size="small" color="primary">
                 Share
   </Button>
-              <Button size="small" color="primary">
+              <Button size="small" color="primary" >
                 Details
   </Button>
             </CardActions>

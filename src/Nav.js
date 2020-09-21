@@ -33,6 +33,9 @@ export default function Nav() {
     setAnchorEl(null);
   };
 
+  const logout = () =>{
+    alert ("You have successfully logout.")
+  };
 
   const navStyle = {
     color: 'white',
@@ -59,7 +62,7 @@ export default function Nav() {
       >
         <MenuItem onClick={handleClose}>Profile</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={logout}>Logout</MenuItem>
       </Menu>
           <Typography variant="h6" className={classes.title} style={{ textAlign: 'left', marginLeft: 10}}>
             Logo
